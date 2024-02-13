@@ -1,7 +1,7 @@
 function Skills() {
   return (
     <div>
-      <p>skills</p>
+      <p>Gaslighting</p>
     </div>
   );
 }
