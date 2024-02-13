@@ -50,7 +50,7 @@ function Navbar() {
               ))}
               <button
                 className="flex flex-col px-4 py-2 border rounded bg-green-100">
-                <a href="./public/shishirResume2.pdf" target="blank" bg-blue-300>Resume</a>
+                <a href="/shishirResume2.pdf" target="blank" bg-blue-300>Resume</a>
               </button>
             </div>
           )}
