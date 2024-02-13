@@ -13,7 +13,7 @@ const AppRoutes = () => (
 )
 
 
-function App() {
+const App: React.FC = () => {
   return (
     <Router>
       <Layout>
