@@ -7,7 +7,7 @@ const links =[
   { to: "/", text: "Home", color: "bg-blue-300"},
   { to: "/skills", text: "Skills", color: "bg-green-300"},
   { to: "/projects", text: "Projects", color: "bg-yellow-300"},
-  { to: "https://drive.google.com/file/d/1_4wMMChEVZUhOwWxXRmbg43DTBMg7Vix/view?usp=sharing", text: "Resume", color: "bg-red-300", newTab: true},
+  { to: "../public/shishirResume2.pdf", text: "Resume", color: "bg-red-300", newTab: true},
 ]
 
 
