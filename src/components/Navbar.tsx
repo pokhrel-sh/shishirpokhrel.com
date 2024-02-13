@@ -17,27 +17,29 @@ function Navbar() {
           </h2>
         </div>
         <div>
-        {!showOptions && (
-          <button className="flex flex-col px-4 py-2 border rounded bg-green-100" onClick={handleClick}>
-            Click Me
-          </button>
-        )}
-        {showOptions && (
-          <>
-            <button className="bg-blue-300 m-1 hover:bg-yellow-100 text-black font-bold py-2 px-4 rounded">
-              Skills
+          {!showOptions && (
+            <button
+              className="flex flex-col px-4 py-2 border rounded bg-green-100"
+              onClick={handleClick}
+            >
+              Click Me
             </button>
-            <button className="bg-green-300 m-1 hover:bg-yellow-100 text-black font-bold py-2 px-4 rounded">
-              Projects
-            </button>
-            <button className="bg-red-300 m-1 hover:bg-yellow-100 text-black font-bold py-2 px-4 rounded">
-              Resume
-            </button>
-          </>
-        )}
+          )}
+          {showOptions && (
+            <>
+              <button className="bg-blue-300 m-1 hover:bg-yellow-100 text-black font-bold py-2 px-4 rounded">
+                Skills
+              </button>
+              <button className="bg-green-300 m-1 hover:bg-yellow-100 text-black font-bold py-2 px-4 rounded">
+                Projects
+              </button>
+              <button className="bg-red-300 m-1 hover:bg-yellow-100 text-black font-bold py-2 px-4 rounded">
+                Resume
+              </button>
+            </>
+          )}
+        </div>
       </div>
-      </div>
-      
     </div>
   );
 }
