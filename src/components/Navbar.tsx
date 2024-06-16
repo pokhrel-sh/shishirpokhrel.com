@@ -7,6 +7,7 @@ const links =[
   { to: "/", text: "Home", color: "bg-blue-300"},
   { to: "/skills", text: "Skills", color: "bg-green-300"},
   { to: "/projects", text: "Projects", color: "bg-yellow-300"},
+  { to : "/shishiResume2.pdf", text: "Resume", color: "bg-red-300"}
 ]
 
 
@@ -29,7 +30,8 @@ function Navbar() {
         <div className="text-left">
           <h1 className="text-4xl font-bold name-title">Shishir Pokhrel</h1>
           <h2 className="text-lg text-gray-600 subtitle">
-            CS & Business Student at Northeastern University
+            Student at Northeastern University <br/>
+            Majoring in Computer Science, Software.
           </h2>
         </div>
         <div>
@@ -48,10 +50,6 @@ function Navbar() {
                   {link.text}
                 </Link>
               ))}
-              <button
-                className="flex flex-col px-4 py-2 border rounded bg-green-100">
-                <a href="/shishirResume2.pdf" target="blank" bg-blue-300>Resume</a>
-              </button>
             </div>
           )}
         </div>
