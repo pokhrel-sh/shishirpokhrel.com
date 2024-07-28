@@ -32,8 +32,8 @@ function Projects() {
       <p className="text-gray-500">Frameworks: Frameworks will be coming soon!</p>
     </div>
     <div className="bg-white rounded-md shadow-lg p-4">
-        <h2 className="text-lg font-bold mb-2"><a href="https://github.com/pokhrel-sh/" className="hover:text-blue-500">Coming Soon</a></h2>
-        <p className="text-gray-500">Very Secret Project </p>
+        <h2 className="text-lg font-bold mb-2"><a href="https://github.com/pokhrel-sh/" className="hover:text-blue-500">Pomodoro Timer</a></h2>
+        <p className="text-gray-500">Pomodoro Timer because I hate others </p>
         <p className="text-blue-500 mt-2"><a href="https://github.com/pokhrel-sh/" target="blank">Github will be made public when the project is ready!</a></p>
         <p className="text-gray-500">Frameworks: Frameworks will be coming soon!</p>
       </div>
