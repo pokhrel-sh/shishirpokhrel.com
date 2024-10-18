@@ -3,23 +3,16 @@ function Home() {
 
   const project = {
     "projects": [
-      {
-        "name": "Portfolio Site",
-        "description": "A project for this portfolio site",
-        "status": "Always In Progress",
-        "github": "https://github.com/shishirpokhrel/portfolio-site",
-        "tech": "React.js, Typescript, TailwindCSS",
-        "link": "https://shishirpokhrel.com",
-        "notes": ""
-      },
+      
       {
         "name": "BiblioConnect",
         "description": "A web app that where you choose books you like based on first impression, and we recommend books based on that.",
         "status": "Completed",
         "github": "https://github.com/Biblio-Connect/BiblioConnect",
         "tech": "React.js, SQLite, Node.js, Typescript, TailwindCSS",
-        "link": "",
-        "notes": ""
+        "link": "https://biblioconnect.seanfinch.com/",//",
+        "notes": "",
+        "githubLinkable": "Github"
       },
       {
         "name": "Open Legislation",
@@ -28,7 +21,8 @@ function Home() {
         "github": "",
         "tech": "React, JavaScript, TailwindCSS",
         "link": "https://openlegislation.asahoo.dev",
-        "notes": "HackHarvard 2024: Open Source Track Winner"
+        "notes": "HackHarvard 2024: Open Source Track Winner",
+        "githubLinkable": "Github"
       },
       {
         "name": "Schedule Northeastern",
@@ -37,7 +31,18 @@ function Home() {
         "github": "https://github.com/pokhrel-sh/schedulenortheastern",
         "tech": "React, Node, Express",
         "link": "",
-        "notes": ""
+        "notes": "",
+        "githubLinkable": "Github"
+      },
+      {
+        "name": "Portfolio Site",
+        "description": "A project for this portfolio site",
+        "status": "Always In Progress",
+        "github": "https://github.com/shishirpokhrel/portfolio-site",
+        "tech": "React.js, Typescript, TailwindCSS",
+        "link": "https://shishirpokhrel.com",
+        "notes": "",
+        "githubLinkable": "Github"
       },
       {
         "name": "Travel Northeastern",
@@ -46,7 +51,8 @@ function Home() {
         "github": "",
         "tech": "",
         "link": "",
-        "notes": ""
+        "notes": "",
+        "githubLinkable": "Github"
       }, 
       {
         "name": "HowMuchCanIStoleFromAmazon",
@@ -55,7 +61,8 @@ function Home() {
         "github": "",
         "tech": "",
         "link": "",
-        "notes": ""
+        "notes": "",
+        "githubLinkable": "Github"
       },
       {
         "name": "HowMuchCanYouStealFromAmazon",
@@ -64,7 +71,8 @@ function Home() {
         "github": "",
         "tech": "",
         "link": "",
-        "notes": ""
+        "notes": "",
+        "githubLinkable": "Github"
       }
     ]
   }
@@ -73,21 +81,21 @@ function Home() {
     {
       "name": "CS4520",
       "description": "Mobile Development",
-      "tech": ""
+      "tech": "Swift, Firebase"
     },
     {
       "name": "CS4530",
       "description": "Software Engineering",
-      "tech": ""
+      "tech": "TypeScript, React"
     },
     {
       "name": "CS4550",
       "description": "Web Development",
-      "tech": ""
+      "tech": "TypeScript, React, Bootstrap"
     },
     {
-      "name": "CS1125",
-      "description": "Mobile Development",
+      "name": "THTR1125",
+      "description": "Improvisation",
       "tech": ""
     }
   ]
@@ -153,22 +161,27 @@ function Home() {
       </div>
 
       
-      <div> Projects</div>
-      <div>
-        {project.projects.map((projects) => {
-          return (
-            <div className="border-2">
-              <div className="">{projects.name}</div>
-              <div>{projects.description}</div>
-              <div>{projects.status}</div>
-              <div>{projects.github}</div>
-              <div>{projects.tech}</div>
-              <div>{projects.link}</div>
-              <div>{projects.notes}</div>
-            </div>
-          )
-        })}
-      </div>
+      <div>Projects</div>
+        <div className="grid grid-cols-2 gap-4">
+          {project.projects.map((projects) => {
+            return (
+
+              <div
+                key={projects.name}
+                className="border-2 pr-2 pl-4 mt-4 mb-4 bg-gray-100 rounded-md shadow-lg"
+              >
+                <button className="bg-gray-200 mt-4"><a href={projects.link}>{projects.name}</a></button>
+                <div>{projects.description}</div>
+                <div>{projects.status}</div>
+                <button className="bg-gray-200"><a href={projects.github}>{projects.githubLinkable}</a></button>
+                <div>{projects.tech}</div>
+                <div>{projects.link}</div>
+                <div>{projects.notes}</div>
+              </div>
+            );
+          })}
+        </div>
+
     </div>
   );
 }
