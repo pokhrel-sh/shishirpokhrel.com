@@ -92,28 +92,28 @@ function Home() {
     }
   ]
 
-  const pastClasses = [
-    {
-      "name": "CS3500",
-      "description": "Object Oriented Design",
-      "tech": ""
-    },
-    {
-      "name": "CS2500",
-      "description": "Fundamentals of Computer Science",
-      "tech": ""
-    },
-    {
-      "name": "CS1800",
-      "description": "Discrete Structures",
-      "tech": ""
-    },
-    {
-      "name": "CS1200",
-      "description": "Computer Science 1",
-      "tech": ""
-    }
-  ]
+  // const pastClasses = [
+  //   {
+  //     "name": "CS3500",
+  //     "description": "Object Oriented Design",
+  //     "tech": ""
+  //   },
+  //   {
+  //     "name": "CS2500",
+  //     "description": "Fundamentals of Computer Science",
+  //     "tech": ""
+  //   },
+  //   {
+  //     "name": "CS1800",
+  //     "description": "Discrete Structures",
+  //     "tech": ""
+  //   },
+  //   {
+  //     "name": "CS1200",
+  //     "description": "Computer Science 1",
+  //     "tech": ""
+  //   }
+  // ]
 
   return (
 
