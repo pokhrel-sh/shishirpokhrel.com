@@ -47,7 +47,7 @@ function Home() {
         "tech": "",
         "link": "",
         "notes": ""
-      },
+      }, 
       {
         "name": "HowMuchCanIStoleFromAmazon",
         "description": "Shows how much I stole from Amazon",
