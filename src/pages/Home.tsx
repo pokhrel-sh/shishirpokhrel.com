@@ -127,70 +127,72 @@ function Home() {
   // ]
 
   return (
+    <div className="flex flex-col items-center p-4">
+      <header className="bg-gray-200 w-full text-center py-4">
+        <h1 className="text-3xl">Shishir Pokhrel</h1>
+        <p>Computer Science @ Northeastern University</p>
+      </header>
 
-
-    <div className="place-content-center flex-auto">
-      <div className="bg-gray-200 ">
-      <div className="text-3xl ">Shishir Pokhrel</div>
-      <div>Computer Science @ Northeastern University</div>
-      </div>
-      <div className="bg-gray-200 mx-60 text-center">
-        <div className="mt-8">About me</div>
-        <div> My name is Shishir Pokhrel. I am a sophomore at Northeastern University studying Computer Science. I love learning new technologies everyday and have been exploring a lot of the things recently. I just bought a mini pc to use it as a server to test out dockers and other cool self-hosted projects. I am taking classes such as Software Engineering, Mobile Developement, and Web Developement. I am currently looking for a software engineering opportunities for Spring & Summer 2025. I like watching and playing Tennis (Kygrios is my Favorite player). I like walking around alone at 10pm in the night, cus why not
-          <div>
-            <div>Connect with me: </div>
-            <div>
-              <div className="text-center">
-              <a href="https://www.linkedin.com/in/shishir-pokhrel/"><FaLinkedin /></a>
-              <a href="https://www.github.com/pokhrel-sh"><FaGithub /></a>
-              </div>
+      <section className="bg-gray-200 mx-16 my-8 text-center p-4">
+        <h2 className="mt-8">About Me</h2>
+        <p>
+          I'm a sophomore at Northeastern University studying Computer Science. I enjoy learning new technologies and recently started exploring server projects using Docker. I'm currently looking for software engineering opportunities for Spring & Summer 2025. I also enjoy watching and playing tennis (Kyrgios is my favorite player) and taking late-night walks.
+        </p>
+        <div className="mt-4">
+          <h3>Connect with me:</h3>
+          <div className="flex justify-center space-x-4">
+            <a href="https://www.linkedin.com/in/shishir-pokhrel/">
+              <FaLinkedin size={24} />
+            </a>
+            <a href="https://www.github.com/pokhrel-sh">
+              <FaGithub size={24} />
+            </a>
           </div>
-
         </div>
-      </div>
-      </div>
-      <div className="my-8 mx-16 text-center bg-gray-300">
-        <div>Skills and Technologies I've used: </div>
-        <div>Languages: Java, JavaScript, TypeScript, SQL, Swift, Kotlin, HTML, CSS, C, C++ (unit testing)</div>
-        <div>Frameworks: JUnit 5, React, Node.js, Express.js, Tailwind CSS, Bootstrap</div>
-        <div>Databases: SQLite, MongoDB, Redis</div>
-        <div>Developer Tools: Amazon Web Services (AWS), Git, GitHub, Bash Shell, LaTeX, Make</div>
-      </div>
+      </section>
 
-      <div>
-        <div className="mt-8 mb-5">Current Classes</div>
-        <div className="grid grid-cols-2 border-2 bg-gray-200">
-          {currentClasses.map((classes) => {
-            return (
-              <div className="border-2 bg-gray-50 flex-auto">
-                <div>{classes.id}  - {classes.name} </div>
-                <div>{classes.name}</div>
-                <div className="mb-4">{classes.tech}</div>
-              </div>
-            )
-          })}
+      <section className="bg-gray-300 mx-16 my-8 p-4 text-center">
+        <h2>Skills and Technologies</h2>
+        <p><strong>Languages:</strong> Java, JavaScript, TypeScript, SQL, Swift, Kotlin, HTML, CSS, C, C++ (unit testing)</p>
+        <p><strong>Frameworks:</strong> JUnit 5, React, Node.js, Express.js, Tailwind CSS, Bootstrap</p>
+        <p><strong>Databases:</strong> SQLite, MongoDB, Redis</p>
+        <p><strong>Developer Tools:</strong> AWS, Git, GitHub, Bash Shell, LaTeX, Make</p>
+      </section>
+
+      <section className="my-8 mx-16 text-center">
+        <h2 className="mt-8 mb-5">Current Classes</h2>
+        <div className="grid grid-cols-2 gap-4 bg-gray-200 p-4">
+          {currentClasses.map((cls) => (
+            <div key={cls.id} className="border-2 bg-gray-50 p-4 flex flex-col">
+              <h3>{cls.id} - {cls.name}</h3>
+              <p>{cls.tech}</p>
+            </div>
+          ))}
         </div>
-        <button className="border-2 bg-gray-200 mt-4">View all Classses (button doesnt work, currently building the website from scratch)</button>
-      </div>
+        <button className="border-2 bg-gray-200 mt-4">View All Classes</button>
+      </section>
 
-      
-      <div>Projects</div>
-        <div className="grid grid-cols-2 gap-4 bg-gray-100 flex-auto">
-          {project.projects.map((projects) => {
-            return (
-                <div className="bg-gray-200 px-4 my-4">
-                <button className="bg-gray-200 pt-5 text-3xl hover:text-blue-800"><a href={projects.link}>{projects.name}</a><span className="text-sm">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;{projects.tech}</span></button>
-                <div>{projects.description}</div>
-                <div>{projects.status}</div>
-                <button className="bg-gray-300 hover:text-blue-800"><a href={projects.github}>{projects.githubLinkable}</a></button>
-                <div>{projects.tech}</div>
-                <div>{projects.link}</div>
-                <div className="pb-5">{projects.notes}</div>
-                </div>
-            );
-          })}
+      <section className="my-8 mx-16 text-center">
+        <h2 className="mt-8 mb-5">Projects</h2>
+        <div className="grid grid-cols-2 gap-4 bg-gray-100 p-4">
+          {project.projects.map((proj) => (
+            <div key={proj.name} className="bg-gray-200 px-4 my-4 p-4">
+              <h3 className="text-2xl">
+                <a href={proj.link} className="hover:text-blue-800">{proj.name}</a>
+                <span className="text-sm"> &nbsp; &nbsp; {proj.tech}</span>
+              </h3>
+              <p>{proj.description}</p>
+              <p><strong>Status:</strong> {proj.status}</p>
+              {proj.github && (
+                <button className="bg-gray-300 hover:text-blue-800">
+                  <a href={proj.github}>Github</a>
+                </button>
+              )}
+              <p className="pb-5">{proj.notes}</p>
+            </div>
+          ))}
         </div>
-
+      </section>
     </div>
   );
 }
