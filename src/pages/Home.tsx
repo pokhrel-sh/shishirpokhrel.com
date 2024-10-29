@@ -133,10 +133,10 @@ function Home() {
         <p>Computer Science @ Northeastern University</p>
       </header>
 
-      <section className="bg-gray-200 mx-16 my-8 text-center p-4">
-        <h2 className="mt-8">About Me</h2>
+      <section className="bg-gray-200 w-full my-4 text-center p-4">
+        <h2>About Me</h2>
         <p>
-          I'm a sophomore at Northeastern University studying Computer Science. I enjoy learning new technologies and recently started exploring server projects using Docker. I'm currently looking for software engineering opportunities for Spring & Summer 2025. I also enjoy watching and playing tennis (Kyrgios is my favorite player) and taking late-night walks.
+          I'm a sophomore studying Computer Science. I enjoy learning new technologies and exploring server projects with Docker. Currently looking for software engineering opportunities for Spring & Summer 2025.
         </p>
         <div className="mt-4">
           <h3>Connect with me:</h3>
@@ -151,17 +151,17 @@ function Home() {
         </div>
       </section>
 
-      <section className="bg-gray-300 mx-16 my-8 p-4 text-center">
+      <section className="bg-gray-300 w-full my-4 p-4 text-center">
         <h2>Skills and Technologies</h2>
-        <p><strong>Languages:</strong> Java, JavaScript, TypeScript, SQL, Swift, Kotlin, HTML, CSS, C, C++ (unit testing)</p>
+        <p><strong>Languages:</strong> Java, JavaScript, TypeScript, SQL, Swift, Kotlin, HTML, CSS, C, C++</p>
         <p><strong>Frameworks:</strong> JUnit 5, React, Node.js, Express.js, Tailwind CSS, Bootstrap</p>
         <p><strong>Databases:</strong> SQLite, MongoDB, Redis</p>
-        <p><strong>Developer Tools:</strong> AWS, Git, GitHub, Bash Shell, LaTeX, Make</p>
+        <p><strong>Tools:</strong> AWS, Git, GitHub, Bash Shell, LaTeX, Make</p>
       </section>
 
-      <section className="my-8 mx-16 text-center">
-        <h2 className="mt-8 mb-5">Current Classes</h2>
-        <div className="grid grid-cols-2 gap-4 bg-gray-200 p-4">
+      <section className="my-4 w-full text-center">
+        <h2 className="mb-5">Current Classes</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full p-4">
           {currentClasses.map((cls) => (
             <div key={cls.id} className="border-2 bg-gray-50 p-4 flex flex-col">
               <h3>{cls.id} - {cls.name}</h3>
@@ -172,14 +172,14 @@ function Home() {
         <button className="border-2 bg-gray-200 mt-4">View All Classes</button>
       </section>
 
-      <section className="my-8 mx-16 text-center">
-        <h2 className="mt-8 mb-5">Projects</h2>
-        <div className="grid grid-cols-2 gap-4 bg-gray-100 p-4">
+      <section className="my-4 w-full text-center">
+        <h2 className="mb-5">Projects</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full p-4">
           {project.projects.map((proj) => (
-            <div key={proj.name} className="bg-gray-200 px-4 my-4 p-4">
+            <div key={proj.name} className="bg-gray-200 p-4">
               <h3 className="text-2xl">
                 <a href={proj.link} className="hover:text-blue-800">{proj.name}</a>
-                <span className="text-sm"> &nbsp; &nbsp; {proj.tech}</span>
+                <span className="text-sm"> &nbsp; {proj.tech}</span>
               </h3>
               <p>{proj.description}</p>
               <p><strong>Status:</strong> {proj.status}</p>
