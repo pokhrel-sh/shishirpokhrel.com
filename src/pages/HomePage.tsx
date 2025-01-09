@@ -1,16 +1,16 @@
 import { useState } from 'react';
-import photo from '../images/photo.jpg'; // Import the image from the images folder
+import photo from '../images/photo.jpg';
 import { Mail, X} from 'lucide-react';
 
 function HomePage() {
   const [showButtons, setShowButtons] = useState(false);
   const [showEmailPopup, setShowEmailPopup] = useState(false);
   const [showImagePopup, setShowImagePopup] = useState(false);
-  const [showSearchButtons, setShowSearchButtons] = useState(true); // New state to control search buttons visibility
+  const [showSearchButtons, setShowSearchButtons] = useState(true);
 
   const handleSearchClick = () => {
-    setShowButtons(!showButtons);  // Toggle the showButtons state (About me buttons)
-    setShowSearchButtons(!showSearchButtons);  // Toggle the visibility of the search buttons
+    setShowButtons(!showButtons);  
+    setShowSearchButtons(!showSearchButtons); 
   };
 
   const toggleEmailPopup = () => {
@@ -106,7 +106,6 @@ function HomePage() {
           </div>
         )}
 
-      {/* Image Popup */}
       {showImagePopup && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white p-6 rounded-lg shadow-xl">
