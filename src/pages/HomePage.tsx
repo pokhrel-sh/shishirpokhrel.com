@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import photo from '../images/photo.jpg';
+import photo from '../asset/photo.jpg';
 import { Mail, X} from 'lucide-react';
 
 function HomePage() {
@@ -62,10 +62,10 @@ function HomePage() {
 
         {showSearchButtons && (
           <div className="mt-4 flex space-x-4 bg-gray-300 rounded">
-            <a href="/quick" className="py-1 px-1 bg-white text-black text-xs rounded hover:bg-gray-700">
+            <a href="https://en.wikipedia.org/wiki/Hold_your_horses" className="py-1 px-1 bg-white text-black text-xs rounded hover:bg-gray-200 hover:underline">
               Quick Search
             </a>
-            <a href="/lucky" className="py-1 px-1 bg-white text-black text-sm rounded hover:bg-gray-700">
+            <a href="https://en.wikipedia.org/wiki/Google_Search#%22I'm_Feeling_Lucky%22" className="py-1 px-1 bg-white text-black text-sm rounded hover:bg-gray-200 hover:underline">
               I am feeling lucky
             </a>
           </div>
